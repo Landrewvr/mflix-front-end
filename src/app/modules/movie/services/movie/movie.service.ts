@@ -8,14 +8,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class MovieService {
-  baseApiRoute: string = environment.dev_api_url;
+  baseApiRoute: string = environment.API_URL;
   
   constructor(private http: HttpClient) { 
-    this.baseApiRoute += 'movies/';
+    this.baseApiRoute += '/';
   }
 
   getAllMovies(): Observable<Respond> {
-    console.log(this.baseApiRoute)
     return this.http.get<Respond>(this.baseApiRoute);
   }
 

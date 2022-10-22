@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   app_port: 4400,
-  dev_api_url: 'http://localhost:3100/'
+  API_URL: 'http://localhost:3100/movies',
+  // API_URL: 'https://mflix-backend-lvr.netlify.app/.netlify/functions/movies'
+
 };
 
 /*

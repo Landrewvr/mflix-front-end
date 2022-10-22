@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   app_port: 4400,
-  dev_api_url: 'http://localhost:3100/'
+  API_URL: 'https://mflix-backend-lvr.netlify.app/.netlify/functions/movies'
 };
