@@ -29,8 +29,7 @@ export class SideMenuComponent implements OnInit {
 
   @HostListener('document:click',['$event'])
   close(event?: any) {
-    const elementId = new ElementRef(event.target).nativeElement.id
-    console.log(elementId)
+    const elementId = new ElementRef(event.target).nativeElement.id;
     if(elementId !== 'menu' && elementId !== 'genre-item')
     this.sharedService.showMenu.next(false);
   }
