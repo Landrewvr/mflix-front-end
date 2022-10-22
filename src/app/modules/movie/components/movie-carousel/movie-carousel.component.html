@@ -1,0 +1,9 @@
+<ngb-carousel #carousel >
+	<ng-template ngbSlide *ngFor="let moviesGroup of moviesGroups">
+		<div class="picsum-img-wrapper movies-gallery">
+			<div class="inner-gallery">
+                <mfx-movie-card *ngFor="let movie of moviesGroup" [movie]="movie"></mfx-movie-card>
+            </div>
+		</div>
+	</ng-template>
+</ngb-carousel>

@@ -1,0 +1,38 @@
+.menu {
+    background-color: rgb(58, 57, 57);
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    opacity: 90%;
+    z-index: 2;
+}
+
+.genre-item {
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    padding-top: 5px;
+    padding-left: 20px;
+}   
+
+.hightlight:hover {
+    background-color: white;
+    color: black;
+    height: 40px;
+}
+
+.close-section{
+    height: 30px;
+}   
+
+.close-btn {
+    float:right;
+    background-color: transparent;
+    border: none;
+}
+
+.close-icon {
+    height: 20px;
+    width: 20px;
+}

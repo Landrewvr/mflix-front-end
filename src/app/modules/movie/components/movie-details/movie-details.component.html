@@ -1,0 +1,70 @@
+
+    <div class="header">
+        <button type="button" class="close-btn" aria-label="Close" (click)="close()">
+            <i>
+                <img class="close-icon" src="../../../../../assets/x.png" >
+            </i>
+        </button>
+    </div>
+    <div class="body">
+        <div class="modal-content">
+            <!-- summary -->
+            <div class="row">
+                <div  class="col-md-4">
+                    <img class="poster" [src]="movie.poster" alt="">
+                </div>
+                <div class="col-md-8 movie-info">
+                    <h4>{{movie.title}}</h4>
+                    <p style="color:aliceblue">{{movie.plot}}</p>
+                     <!-- writers -->
+                     <div class="row writers">
+                        <div class="col-md-12"> 
+                            Writers: <span *ngFor="let writer of movie.writers"> {{writer}} </span></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2 meta">
+                            <span *ngIf="movie.rated">{{movie.rated}}</span>
+                            <span *ngIf="!movie.rated">NOT RATED</span>
+                        </div>
+                        <div class="col-md-1 meta">
+                            <span>{{movie.runtime}}min</span>
+                        </div>
+                        <div class="col-md-4 meta">
+                            <span *ngFor="let genre of movie.genres"> {{genre}} </span> 
+                        </div>
+                        <div class="col-md-5 meta">
+                            <p> Released on {{movie.released | date: 'MM/dd/yyyy'}}, <span>{{movie.countries}}</span></p>
+                        </div>
+                    </div>
+                    <!-- ratings -->
+                    <div class="row rating">
+                        <div class="col-md-2"> Imdb:<span *ngIf="movie.imdb.rating"> {{movie.imdb.rating}}/10 </span></div>
+                        <div class="col-md-7"> Rotten tomatoes:  Viewer: <span *ngIf="movie.tomatoes.viewer">  {{movie.tomatoes.viewer.rating}}/10 </span> Critic: <span *ngIf="movie.tomatoes.critic">  {{movie.tomatoes.critic.rating}}/10 </span></div>
+                        <div class="col-md-3"> Rotten: <span *ngIf="movie.tomatoes.rotten">{{movie.tomatoes.rotten}}</span> Fresh: <span *ngIf="movie.tomatoes.fresh">{{movie.tomatoes.fresh}}</span> </div>
+                    </div>
+
+                    <!-- AWARDS -->
+                    <div class="row awards" *ngFor="let award of movie.awards">
+                        <div class="col-md-6"> <span>Wins: {{award.wins}} Nominations: {{award.wins}} </span></div>
+                        <div class="col-md-6"> <span></span></div>
+                    </div>
+
+                    <!-- plot -->
+                    <div class="fullplot">
+                        <p>{{movie.fullplot}}</p>
+                    </div>
+
+                    <div class="cast">
+                        <p>Cast:</p>
+                        <ul>
+                            <li *ngFor="let actor of movie.cast">
+                                <i><img class="star-icon" src="../../../../../assets/star.png" ></i> <span> {{actor}}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

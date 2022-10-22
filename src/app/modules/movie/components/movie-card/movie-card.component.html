@@ -1,0 +1,18 @@
+<div class="movie-card" *ngIf="movie">
+    <div>
+        <img class="movie-poster" [src]="movie.poster" (click)="loadDetails(movie)" >
+    </div>
+    <div class="movie-genres">
+        <span *ngFor="let genre of movie.genres; let i = index">
+           <span *ngIf="movie.genres.length != i + 1"> {{genre}} |</span> <span *ngIf="movie.genres.length == i + 1"> {{genre}}</span>
+        </span>
+    </div>
+    <div class="movie-language">
+        <span *ngFor="let language of movie.languages; let i = index">
+            <span *ngIf="movie.languages.length != i + 1"> {{language}} |</span> <span *ngIf="movie.languages.length == i + 1"> {{language}}</span>
+         </span>
+    </div>
+    <div class="movie-ranting" *ngIf="movie && movie.tomatoes && movie.tomatoes.critic && movie.tomatoes.critic.rating">
+        {{movie.tomatoes.critic.rating}} / 10
+    </div>
+</div>
