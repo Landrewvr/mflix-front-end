@@ -20,4 +20,22 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have the author on display', () => {
+    expect(component.author).toBeTruthy();
+  });
+
+  it('should have the title on display', () => {
+    expect(component.title).toBeTruthy();
+  });
+
+  it('should have the author and title as string values', () => {
+    expect(typeof component.author).toBe('string');
+    expect(typeof component.title).toBe('string');
+  });
+
+  it('should display the correct title of the application', () => {
+    expect(component.title).toBe('mflix');
+  })
+
 });

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Respond } from 'src/app/models/respond';
+import { MovieResponse } from 'src/app/models/movie-response';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -11,15 +11,14 @@ export class MovieService {
   baseApiRoute: string = environment.API_URL;
   
   constructor(private http: HttpClient) { 
-    this.baseApiRoute += '/';
   }
 
-  getAllMovies(): Observable<Respond> {
-    return this.http.get<Respond>(this.baseApiRoute);
+  getAllMovies(): Observable<MovieResponse> {
+    return this.http.get<MovieResponse>(this.baseApiRoute);
   }
 
-  getMoviesByGenre(genre: string): Observable<Respond> {
-    return this.http.get<Respond>(this.baseApiRoute + genre);
+  getMoviesByGenre(genre: string): Observable<MovieResponse> {
+    return this.http.get<MovieResponse>(this.baseApiRoute + genre);
   }
 
 }

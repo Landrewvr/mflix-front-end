@@ -13,4 +13,14 @@ describe('SharedService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should have genre subject created', () => {
+    expect(service.genre).toBeTruthy();
+  });
+
+  it('should have showMenu subject created', () => {
+    expect(service.showMenu).toBeTruthy();
+  });
+
+
 });
