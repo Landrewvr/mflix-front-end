@@ -1,6 +1,8 @@
 # MflixFrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+This project is a sample of how i would create a frontend project to resemble a basic movie review and sypnosys site.
+The back-end portion is in the following repo: https://github.com/Landrewvr/mflix-back-end
+
 
 ## Development server
 
